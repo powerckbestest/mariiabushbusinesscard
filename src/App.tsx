@@ -29,7 +29,7 @@ function App() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center px-8 pt-20">
         <div className="max-w-7xl mx-auto w-full text-center">
-          <h1 className="text-[12vw] leading-none font-bold font-anton whitespace-nowrap">
+          <h1 className="text-[12vw] leading-none font-bold font-anton">
             PRODUCT DESIGNER
           </h1>
           <div className="flex justify-between mt-8">
