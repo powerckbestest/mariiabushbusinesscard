@@ -1,136 +1,134 @@
-import { Mail, MessageSquare, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { projects } from "./constants";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="bg-[#1C1C1C] min-h-screen text-white font-poppins">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/40 backdrop-blur-sm z-50 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold">BUSHM(A)KINA</div>
-          {["about", "projects", "shorts", "contacts"].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item)}
-              className="text-white hover:text-gray-300 transition-colors"
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-      </nav>
+    <div className="min-h-screen bg-white text-black">
+      <main className="h-screen flex flex-col justify-between">
+        {/* Navigation */}
+        <nav className="flex justify-around py-8">
+          <a href="#about" className="hover:opacity-70">
+            ABOUT
+          </a>
+          <a href="#works" className="hover:opacity-70">
+            LATEST WORKS
+          </a>
+          <a href="#contact" className="hover:opacity-70">
+            CONTACT
+          </a>
+        </nav>
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center px-8 pt-20">
-        <div className="max-w-7xl mx-auto w-full text-center">
-          <h1 className="text-[12vw] leading-none font-bold font-anton">
-            PRODUCT DESIGNER
+        {/* Hero Section */}
+        <div className="flex justify-around flex-grow items-center">
+          <h1 className="text-6xl font-bold mb-2">
+            MARIIA
+            <br />
+            BUSHMAKINA
+            <br />
+            UI/UX
+            <br />
+            DESIGNER
           </h1>
-          <div className="flex justify-between mt-8">
-            <p>made by bushmakinamariia</p>
-            <p>(my story)</p>
-            <p>2024 edition</p>
-          </div>
-          <p className="text-center mt-32 text-xl">
-            (turning imagination into intuitive digital realities)
-          </p>
+          <img src="../assets/images/profile.png" alt="Profile" />
         </div>
-      </section>
+
+        <div className="flex justify-around py-4 px-8">
+          <p>2025</p>
+          <p>
+            REACH OUT
+            <br />
+            MARIIABUSHMAKINA@GMAIL.COM
+          </p>
+          <p>SPB [TIME +3]</p>
+        </div>
+      </main>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen px-8 py-20 bg-[#2A2A2A]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-[8vw] font-bold mb-12 font-anton">ABOUT</h2>
-          <p className="text-right text-xl mb-16">[nice to meet you]</p>
-          <div className="space-y-8 text-xl">
-            <p>Hello, I'm Mariia.</p>
-            <p>
+      <section id="about" className="px-8 py-16 h-screen flex flex-col">
+        <div className="bg-black h-[1px] w-[95%] mx-auto mb-6"></div>
+        <div className="flex px-12 flex-grow">
+          <h2 className="text-xl mb-6 w-1/3">
+            <strong>[ABOUT]</strong>
+          </h2>
+          <div className="w-2/3">
+            <p className="text-lg mb-4">Hello, I'm Mariia.</p>
+            <p className="text-lg mb-4">
               A passionate and visionary UI/UX designer with 3+ years of
               experience turning bold ideas into intuitive digital experiences
               that captivate users. Known for crafting visually stunning and
               user-centric designs, I bring a unique blend of creativity and
               strategic thinking to every project.
             </p>
-            <p>
+            <p className="text-lg mb-4">
               Key achievements include developing a unified design system for a
               messaging platform, enhancing user engagement, and streamlining
               workflows for diverse clients. Beyond hard skills, I excel in team
               collaboration, delivering impactful presentations, and resolving
               challenges with ease.
             </p>
+            <p className="text-lg mb-4">
+              [I’m dedicated to designing experiences that leave a lasting
+              impression — where innovation meets elegance, and functionality
+              meets delight]
+            </p>
           </div>
-          <p className="text-center mt-16 text-xl max-w-3xl mx-auto">
-            [I'm dedicated to designing experiences that leave a lasting
-            impression—where innovation meets elegance, and functionality meets
-            delight]
-          </p>
+        </div>
+        <div className="flex justify-center items-end h-16">
+          NICE TO MEET YOU
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="min-h-screen px-8 py-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-[8vw] font-bold font-anton">PROJECTS</h2>
-          <p className="text-center mt-8 text-xl">Coming soon!</p>
-        </div>
-      </section>
+      {/* Works Section */}
+      <section
+        id="works"
+        className="px-12 pb-16 pt-6 bg-[#1B1B1B] text-white h-screen flex flex-col"
+      >
+        <div className="bg-white h-[1px] w-[95%] mx-auto mb-6"></div>
+        <div className="mx-auto flex justify-around items-start flex-grow">
+          <h2 className="text-xl ml-10 mr-24 w-1/3 whitespace-nowrap">
+            [LATEST WORKS]
+          </h2>
 
-      {/* Shorts Section */}
-      <section id="shorts" className="min-h-screen px-8 py-20 bg-[#755C3B]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-[8vw] font-bold mb-8 font-anton">SHORTS</h2>
-          <p className="text-right text-xl mb-16">
-            [here are my small pet projects or works that are not extensive]
-          </p>
-          <p className="text-xl">They will be available soon!</p>
-        </div>
-      </section>
-
-      {/* Contacts Section */}
-      <section id="contacts" className="min-h-screen px-8 py-20 bg-[#0A0A0A]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-[8vw] font-bold mb-8 font-anton">CONTACTS</h2>
-          <p className="text-right text-xl mb-16">
-            [i'll be glad to create something amazing together]
-          </p>
-          <div className="space-y-6">
-            <a
-              href="mailto:mariya20112004@gmail.com"
-              className="flex items-center gap-4 text-xl hover:text-gray-300 transition-colors"
-            >
-              <Mail size={24} />
-              mariya20112004@gmail.com
-            </a>
-            <a
-              href="https://t.me/iwanxss"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 text-xl hover:text-gray-300 transition-colors"
-            >
-              <MessageSquare size={24} />
-              iwanxss
-            </a>
-            <a
-              href="https://ru.linkedin.com/in/mariia-bushmakina"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 text-xl hover:text-gray-300 transition-colors"
-            >
-              <Linkedin size={24} />
-              mariia-bushmakina
-            </a>
+          <div className="flex justify-between mr-7">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                imageSrc={project.imageSrc}
+                altText={project.altText}
+              />
+            ))}
           </div>
-          <p className="text-center mt-16 text-xl">
-            [let's collaborate! don't hesitate to get in touch]
-          </p>
+        </div>
+        <div className="flex justify-center items-end h-16">
+          THESE ARE THE CASES I WORKED ON
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="pl-48 py-1">
+        <div className="">
+          <h2 className="text-6xl font-bold mb-8">
+            EMAIL
+            <br />
+            TELEGRAM
+            <br />
+            LINKEDIN
+          </h2>
+          <div className="flex items-center gap-4">
+            <Mail className="w-6 h-6" />
+            <span>MARIABUSHMAKINA@GMAIL.COM</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-4 flex justify-between text-sm">
+        <p className="ml-48">MARIIA.BUSHMAKINA'25</p>
+        <p className="mr-48">ALL RIGHTS RESERVED</p>
+      </footer>
     </div>
   );
 }
