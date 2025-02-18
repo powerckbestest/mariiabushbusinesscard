@@ -1,5 +1,3 @@
-import { Mail } from "lucide-react";
-
 const Contact = () => {
   return (
     <section id="contact" className="py-1 px-8 flex flex-col items-center">
@@ -16,10 +14,6 @@ const Contact = () => {
             <br />
             LINKEDIN
           </h2>
-          <div className="flex items-center gap-4">
-            <Mail className="w-6 h-6" />
-            <span>MARIABUSHMAKINA@GMAIL.COM</span>
-          </div>
         </div>
       </div>
     </section>
