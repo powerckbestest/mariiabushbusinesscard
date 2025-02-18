@@ -4,7 +4,7 @@ export const projects = [
     title: "MOBILE APP",
     description:
       "A corporate messenger powered by AI, featuring a gamified user mood survey and a subsequent analysis system for managers.",
-    imageSrc: "../assets/images/project 1.png",
+    imageSrc: "/assets/images/project 1.png",
     solutions: [
       "[1] Designing for an Uncharted User Experience",
       "[2] Balancing AI Complexity with Usability",
@@ -27,7 +27,7 @@ export const projects = [
     title: "WEB APP",
     description:
       "An innovative web platform for task management, designed to optimize team workflows.",
-    imageSrc: "../assets/images/project 2.png",
+    imageSrc: "/assets/images/project 2.png",
     solutions: [
       "[1] Simplifying Complex Workflows for diverse teams",
       "[2] Providing clear visibility across Teams and Projects",
@@ -46,7 +46,7 @@ export const projects = [
     title: "MOBILE APP",
     description:
       "A task tracker with the ability to create habits and monitor their regular completion.",
-    imageSrc: "../assets/images/project 3.png",
+    imageSrc: "/assets/images/project 3.png",
     solutions: [
       "[1] Research which habits users want to track and what metrics are important for tracking them (e.g., frequency, duration)",
       "[2] Design a minimalist user interface (UI) for a task tracker, including multiple habit overview options with vibrant visuals and an intuitive system",

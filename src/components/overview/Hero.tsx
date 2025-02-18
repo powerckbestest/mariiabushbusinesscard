@@ -12,7 +12,7 @@ const Hero = () => {
           DESIGNER
         </h1>
         <img
-          src="../assets/images/profile.png"
+          src="/assets/images/profile.png"
           alt="Profile"
           className="max-w-xs mt-4"
         />
